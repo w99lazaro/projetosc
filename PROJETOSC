@@ -1,1 +1,70 @@
+#include <stdio.h>
+
+int main() {
+    printf("DESAFIO SUPER TRUNFO\n");
+
+    char ESTADO[3];  
+    char CODIGO[10];   
+    char CIDADE[50];   
+    int POPULACAO;
+    float AREA;
+    float PIB;
+    int PontosTuristicos;
+
+    // Entrada de dados
+    printf("Escolha um ESTADO (sigla ex: SP, RJ, MG):\n");
+    scanf("%2s", ESTADO);
+
+    printf("Digite o CODIGO:\n");
+    scanf("%9s", CODIGO);
+    
+    printf("Escolha uma CIDADE:\n");
+    scanf("%49s", CIDADE); 
+
+    printf("Digite a POPULACAO:\n");
+    scanf("%d", &POPULACAO);
+
+    printf("Digite a AREA (em km²):\n");
+    scanf("%f", &AREA);
+    
+    printf("Digite o PIB (em bilhões):\n");
+    scanf("%f", &PIB);
+    
+    printf("Número de PONTOS TURÍSTICOS:\n");
+    scanf("%d", &PontosTuristicos);
+
+    // Exibição dos dados
+    printf("\nDADOS INSERIDOS:\n");
+    printf("Estado: %s\n", ESTADO);
+    printf("Código: %s\n", CODIGO);
+    printf("Cidade: %s\n", CIDADE);
+    printf("População: %d\n", POPULACAO);
+    printf("Área: %.2f km²\n", AREA);
+    printf("PIB: %.2f bilhões\n", PIB);
+    printf("Pontos Turísticos: %d\n", PontosTuristicos);
+
+    // Lógica de classificação
+    if (POPULACAO > 1000000) {
+        printf("A cidade %s é muito populosa!\n", CIDADE);
+    } else {
+        printf("A cidade %s tem uma população moderada.\n", CIDADE);
+    }
+
+    if (PIB > 50.0) {
+        printf("%s possui uma economia muito forte!\n", CIDADE);
+    } else if (PIB > 10.0) {
+        printf("%s tem uma economia razoável.\n", CIDADE);
+    } else {
+        printf("%s possui uma economia em desenvolvimento.\n", CIDADE);
+    }
+
+    if (PontosTuristicos > 10) {
+        printf("%s é um destino turístico incrível!\n", CIDADE);
+    } else {
+        printf("%s possui poucos pontos turísticos.\n", CIDADE);
+    }
+
+    return 0;
+}
+
 
